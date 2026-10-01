@@ -1,0 +1,33 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- ATLAS Logo Concept 3: Layered Cartographic Planes -->
+  <!-- Deep Teal: #0A5C5F -->
+  
+  <defs>
+    <style>
+      .layer1 { fill: #527A6E; }
+      .layer2 { fill: #3B7A7D; }
+      .layer3 { fill: #0A5C5F; }
+      .accent { fill: #D97E3F; }
+    </style>
+  </defs>
+  
+  <!-- Back layer (largest) - representing national/broad data -->
+  <rect class="layer1" x="45" y="65" width="90" height="90" rx="6" opacity="0.4" transform="rotate(-5 90 110)"/>
+  
+  <!-- Middle layer - representing regional/ICB data -->
+  <rect class="layer2" x="55" y="75" width="80" height="80" rx="6" opacity="0.6" transform="rotate(3 95 115)"/>
+  
+  <!-- Front layer (smallest) - representing organizational data -->
+  <rect class="layer3" x="65" y="85" width="70" height="70" rx="6"/>
+  
+  <!-- Corner registration marks (cartographic reference) -->
+  <path class="accent" d="M 75 95 L 75 90 L 80 90" stroke="#D97E3F" stroke-width="2" fill="none"/>
+  <path class="accent" d="M 125 95 L 125 90 L 120 90" stroke="#D97E3F" stroke-width="2" fill="none"/>
+  <path class="accent" d="M 75 145 L 75 150 L 80 150" stroke="#D97E3F" stroke-width="2" fill="none"/>
+  <path class="accent" d="M 125 145 L 125 150 L 120 150" stroke="#D97E3F" stroke-width="2" fill="none"/>
+  
+  <!-- Central coordinate marker -->
+  <circle fill="#FFFFFF" cx="100" cy="120" r="4"/>
+  <line x1="100" y1="115" x2="100" y2="125" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="95" y1="120" x2="105" y2="120" stroke="#FFFFFF" stroke-width="1.5"/>
+</svg>

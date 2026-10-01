@@ -1,0 +1,34 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- ATLAS Logo Concept 4: Geometric "A" with Data Flow -->
+  <!-- Deep Teal: #0A5C5F -->
+  
+  <defs>
+    <style>
+      .primary { fill: #0A5C5F; }
+      .secondary { fill: #3B7A7D; }
+      .accent { fill: #D97E3F; }
+    </style>
+  </defs>
+  
+  <!-- Left pillar of "A" -->
+  <path class="primary" d="M 70 140 L 85 60 L 100 60 L 85 140 Z"/>
+  
+  <!-- Right pillar of "A" -->
+  <path class="secondary" d="M 115 60 L 130 140 L 115 140 L 100 60 Z"/>
+  
+  <!-- Crossbar with data flow elements -->
+  <rect class="primary" x="75" y="105" width="50" height="12" rx="2"/>
+  
+  <!-- Data node indicators on crossbar -->
+  <circle class="accent" cx="85" cy="111" r="3"/>
+  <circle class="accent" cx="100" cy="111" r="3"/>
+  <circle class="accent" cx="115" cy="111" r="3"/>
+  
+  <!-- Peak node -->
+  <circle class="accent" cx="100" cy="55" r="5"/>
+  
+  <!-- Subtle grid lines suggesting data structure -->
+  <line x1="50" y1="100" x2="150" y2="100" stroke="#0A5C5F" stroke-width="1" opacity="0.15"/>
+  <line x1="50" y1="120" x2="150" y2="120" stroke="#0A5C5F" stroke-width="1" opacity="0.15"/>
+  <line x1="100" y1="50" x2="100" y2="150" stroke="#0A5C5F" stroke-width="1" opacity="0.15"/>
+</svg>

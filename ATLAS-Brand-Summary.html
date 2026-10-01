@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS Brand Summary - One Page Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F7F9FA;
+            padding: 40px 20px;
+        }
+        
+        .page {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(44, 62, 66, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0A5C5F 0%, #3B7A7D 100%);
+            color: white;
+            padding: 48px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        
+        .header .tagline {
+            font-size: 24px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .content {
+            padding: 48px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            background: #F7F9FA;
+            border-radius: 8px;
+            padding: 28px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0A5C5F;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        /* Logo Display */
+        .logo-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 40px;
+            background: white;
+            border: 2px solid #D8E1E3;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-icon-display {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+        
+        .logo-layer {
+            position: absolute;
+            border-radius: 6px;
+        }
+        
+        .layer-1 {
+            background: #527A6E;
+            opacity: 0.4;
+            width: 72px;
+            height: 72px;
+            top: 8px;
+            left: 4px;
+            transform: rotate(-5deg);
+        }
+        
+        .layer-2 {
+            background: #3B7A7D;
+            opacity: 0.6;
+            width: 64px;
+            height: 64px;
+            top: 10px;
+            left: 8px;
+            transform: rotate(3deg);
+        }
+        
+        .layer-3 {
+            background: #0A5C5F;
+            width: 56px;
+            height: 56px;
+            top: 12px;
+            left: 12px;
+        }
+        
+        .logo-wordmark {
+            font-size: 64px;
+            font-weight: 700;
+            color: #2C3E42;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Color Swatches */
+        .color-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .color-swatch {
+            flex: 1;
+            height: 80px;
+            border-radius: 6px;
+            display: flex;
+            align-items: flex-end;
+            padding: 12px;
+            color: white;
+            font-size: 11px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Typography Examples */
+        .type-example {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #D8E1E3;
+        }
+        
+        .type-example:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .type-label {
+            font-size: 11px;
+            color: #8F9FA3;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+        
+        .h1-example {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2C3E42;
+            letter-spacing: -0.01em;
+        }
+        
+        .h2-example {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2C3E42;
+            letter-spacing: -0.005em;
+        }
+        
+        .body-example {
+            font-size: 16px;
+            color: #2C3E42;
+            line-height: 1.5;
+        }
+        
+        .data-example {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 24px;
+            font-weight: 500;
+            color: #0A5C5F;
+        }
+        
+        /* Button Examples */
+        .button-showcase {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-demo {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary-demo {
+            background: #0A5C5F;
+            color: white;
+        }
+        
+        .btn-secondary-demo {
+            background: #D97E3F;
+            color: white;
+        }
+        
+        .btn-ghost-demo {
+            background: transparent;
+            border: 2px solid #0A5C5F;
+            color: #0A5C5F;
+        }
+        
+        /* Brand Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border: 2px solid #D8E1E3;
+            border-radius: 8px;
+        }
+        
+        .value-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        
+        .value-title {
+            font-weight: 700;
+            color: #0A5C5F;
+            margin-bottom: 4px;
+        }
+        
+        .value-desc {
+            font-size: 13px;
+            color: #5A6C70;
+        }
+        
+        /* Usage Guidelines */
+        .guideline {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .guideline-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .guideline-text {
+            font-size: 14px;
+            color: #2C3E42;
+        }
+        
+        .do { border-left: 3px solid #4A8F72; }
+        .dont { border-left: 3px solid #C44536; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <h1>ATLAS</h1>
+            <div class="tagline">Navigate the complete picture</div>
+        </div>
+        
+        <div class="content">
+            <!-- Logo Section -->
+            <div class="section full-width">
+                <div class="section-title">Primary Logo</div>
+                <div class="logo-showcase">
+                    <div class="logo-icon-display">
+                        <div class="logo-layer layer-1"></div>
+                        <div class="logo-layer layer-2"></div>
+                        <div class="logo-layer layer-3"></div>
+                    </div>
+                    <div class="logo-wordmark">ATLAS</div>
+                </div>
+                <p style="text-align: center; color: #5A6C70; font-size: 14px;">
+                    Geometric layered planes representing comprehensive data integration • Modern • Trustworthy • Clear
+                </p>
+            </div>
+            
+            <!-- Brand Values -->
+            <div class="section full-width">
+                <div class="section-title">Brand Values</div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🗺️</div>
+                        <div class="value-title">Comprehensive</div>
+                        <div class="value-desc">Every sector, one view</div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">✓</div>
+                        <div class="value-title">Trusted</div>
+                        <div class="value-desc">Objective, evidence-based</div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <div class="value-title">Clear</div>
+                        <div class="value-desc">Complex made navigable</div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">→</div>
+                        <div class="value-title">Modern</div>
+                        <div class="value-desc">Forward-thinking, accessible</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <!-- Color Palette -->
+                <div class="section">
+                    <div class="section-title">Primary Colors</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #0A5C5F;">#0A5C5F<br>Deep Teal</div>
+                        <div class="color-swatch" style="background: #3B7A7D;">#3B7A7D<br>Slate Teal</div>
+                        <div class="color-swatch" style="background: #527A6E;">#527A6E<br>Mineral Green</div>
+                    </div>
+                    <div class="section-title" style="margin-top: 24px;">Accent Colors</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #D97E3F;">#D97E3F<br>Amber</div>
+                        <div class="color-swatch" style="background: #B8654D;">#B8654D<br>Terracotta</div>
+                    </div>
+                    <div class="section-title" style="margin-top: 24px;">Neutrals</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #2C3E42;">#2C3E42<br>Charcoal</div>
+                        <div class="color-swatch" style="background: #5A6C70;">#5A6C70<br>Slate Gray</div>
+                        <div class="color-swatch" style="background: #8F9FA3; color: #2C3E42;">#8F9FA3<br>Cool Gray</div>
+                    </div>
+                </div>
+                
+                <!-- Typography -->
+                <div class="section">
+                    <div class="section-title">Typography</div>
+                    <div class="type-example">
+                        <div class="type-label">H1 - Inter Bold, 36px</div>
+                        <div class="h1-example">National Health Intelligence</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">H2 - Inter SemiBold, 28px</div>
+                        <div class="h2-example">System Performance</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Body - Inter Regular, 16px</div>
+                        <div class="body-example">ATLAS brings together data from across acute, community, mental health, social care, and emergency services.</div>
+                    </div>
+                    <div class="type-example">
+                        <div class="type-label">Data/Numbers - IBM Plex Mono, 24px</div>
+                        <div class="data-example">24,583</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="section full-width">
+                <div class="section-title">Button Styles</div>
+                <div class="button-showcase">
+                    <button class="btn-demo btn-primary-demo">Primary Button</button>
+                    <button class="btn-demo btn-secondary-demo">Secondary Button</button>
+                    <button class="btn-demo btn-ghost-demo">Ghost Button</button>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <!-- Usage Guidelines -->
+                <div class="section">
+                    <div class="section-title">Logo Usage - Do's</div>
+                    <div class="guideline do">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-text">Use approved logo files</div>
+                    </div>
+                    <div class="guideline do">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-text">Maintain proper clear space</div>
+                    </div>
+                    <div class="guideline do">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-text">Use on approved backgrounds</div>
+                    </div>
+                    <div class="guideline do">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-text">Scale proportionally</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">Logo Usage - Don'ts</div>
+                    <div class="guideline dont">
+                        <div class="guideline-icon">✗</div>
+                        <div class="guideline-text">Distort or stretch the logo</div>
+                    </div>
+                    <div class="guideline dont">
+                        <div class="guideline-icon">✗</div>
+                        <div class="guideline-text">Change colors outside palette</div>
+                    </div>
+                    <div class="guideline dont">
+                        <div class="guideline-icon">✗</div>
+                        <div class="guideline-text">Add effects (shadows, gradients)</div>
+                    </div>
+                    <div class="guideline dont">
+                        <div class="guideline-icon">✗</div>
+                        <div class="guideline-text">Rotate or modify the icon</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Taglines & Messaging -->
+            <div class="section full-width">
+                <div class="section-title">Brand Messaging</div>
+                <div style="margin-bottom: 20px;">
+                    <div style="font-weight: 600; color: #0A5C5F; margin-bottom: 8px;">Primary Tagline:</div>
+                    <div style="font-size: 24px; color: #2C3E42; font-weight: 500;">"Navigate the complete picture"</div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <div style="font-weight: 600; color: #0A5C5F; margin-bottom: 8px;">Subtitle:</div>
+                    <div style="font-size: 18px; color: #5A6C70;">Population health and care intelligence</div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; color: #0A5C5F; margin-bottom: 8px;">Brand Description:</div>
+                    <div style="font-size: 16px; color: #2C3E42; line-height: 1.6;">
+                        ATLAS is a national data intelligence platform bringing together insights from across acute, community, mental health, social care, emergency services, and public health—helping leaders navigate the complete picture of population health and care.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- File Reference -->
+            <div class="section full-width" style="background: #0A5C5F; color: white;">
+                <div style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">📦 Complete Branding Pack Includes:</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 14px; line-height: 1.8;">
+                    <div>
+                        • ATLAS-Brand-Guidelines.md<br>
+                        • atlas-logo-concept-1.svg<br>
+                        • atlas-logo-concept-2.svg<br>
+                        • atlas-logo-concept-3.svg<br>
+                        • atlas-logo-concept-4.svg
+                    </div>
+                    <div>
+                        • atlas-logo-horizontal.svg<br>
+                        • atlas-favicon-32.svg<br>
+                        • atlas-color-swatches.html<br>
+                        • atlas-ui-components-demo.html<br>
+                        • ATLAS-BRANDING-README.md
+                    </div>
+                </div>
+                <div style="margin-top: 20px; font-size: 13px; opacity: 0.9;">
+                    Open the README for implementation guidance and the HTML files in your browser to see interactive demos.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- ATLAS Logo Concept 1: Interconnected Hexagonal Planes -->
+  <!-- Deep Teal: #0A5C5F -->
+  
+  <defs>
+    <style>
+      .primary { fill: #0A5C5F; }
+      .secondary { fill: #3B7A7D; }
+      .accent { fill: #527A6E; }
+    </style>
+  </defs>
+  
+  <!-- Background hexagonal plane (back layer) -->
+  <path class="accent" opacity="0.6" d="M 140 60 L 165 75 L 165 105 L 140 120 L 115 105 L 115 75 Z"/>
+  
+  <!-- Middle rectangular plane -->
+  <path class="secondary" opacity="0.8" d="M 60 80 L 120 80 L 120 140 L 60 140 Z" transform="rotate(-15 90 110)"/>
+  
+  <!-- Front hexagonal plane (front layer) -->
+  <path class="primary" d="M 80 100 L 105 115 L 105 145 L 80 160 L 55 145 L 55 115 Z"/>
+  
+  <!-- Central connection point (anchor) -->
+  <circle class="accent" cx="100" cy="100" r="8"/>
+  <circle fill="#FFFFFF" cx="100" cy="100" r="4"/>
+  
+  <!-- Connection lines -->
+  <line x1="100" y1="100" x2="80" y2="130" stroke="#0A5C5F" stroke-width="2" opacity="0.4"/>
+  <line x1="100" y1="100" x2="140" y2="90" stroke="#0A5C5F" stroke-width="2" opacity="0.4"/>
+</svg>

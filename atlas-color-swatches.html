@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS Color Palette</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            background: #F7F9FA;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2C3E42;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #5A6C70;
+            margin-bottom: 48px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(44, 62, 66, 0.08);
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2C3E42;
+            margin-bottom: 24px;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .color-card {
+            border: 1px solid #D8E1E3;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .color-swatch {
+            height: 120px;
+            width: 100%;
+            border-bottom: 1px solid #D8E1E3;
+        }
+        
+        .color-info {
+            padding: 16px;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2C3E42;
+            margin-bottom: 8px;
+        }
+        
+        .color-values {
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            font-size: 13px;
+            color: #5A6C70;
+        }
+        
+        .color-value {
+            margin-bottom: 4px;
+        }
+        
+        .usage {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #8F9FA3;
+            font-style: italic;
+        }
+        
+        .chart-example {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+        
+        .chart-bar {
+            height: 40px;
+            flex: 1;
+            min-width: 60px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ATLAS Color Palette</h1>
+        <p class="subtitle">Population Health and Care Intelligence</p>
+        
+        <!-- Primary Colors -->
+        <div class="section">
+            <h2>Primary Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #0A5C5F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Teal</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #0A5C5F</div>
+                            <div class="color-value">RGB: 10, 92, 95</div>
+                        </div>
+                        <div class="usage">Primary brand color, headers, navigation</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #3B7A7D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate Teal</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #3B7A7D</div>
+                            <div class="color-value">RGB: 59, 122, 125</div>
+                        </div>
+                        <div class="usage">Secondary UI, hover states</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #527A6E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mineral Green</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #527A6E</div>
+                            <div class="color-value">RGB: 82, 122, 110</div>
+                        </div>
+                        <div class="usage">Success states, supplementary</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Accent Colors -->
+        <div class="section">
+            <h2>Accent Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #D97E3F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Amber</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #D97E3F</div>
+                            <div class="color-value">RGB: 217, 126, 63</div>
+                        </div>
+                        <div class="usage">CTAs, highlights, interaction</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #B8654D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Warm Terracotta</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #B8654D</div>
+                            <div class="color-value">RGB: 184, 101, 77</div>
+                        </div>
+                        <div class="usage">Secondary CTAs, emphasis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Neutral Palette -->
+        <div class="section">
+            <h2>Neutral Palette</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #2C3E42;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Charcoal</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #2C3E42</div>
+                            <div class="color-value">RGB: 44, 62, 66</div>
+                        </div>
+                        <div class="usage">Primary text</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #5A6C70;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate Gray</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #5A6C70</div>
+                            <div class="color-value">RGB: 90, 108, 112</div>
+                        </div>
+                        <div class="usage">Secondary text</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #8F9FA3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Cool Gray</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #8F9FA3</div>
+                            <div class="color-value">RGB: 143, 159, 163</div>
+                        </div>
+                        <div class="usage">Tertiary text, borders</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #D8E1E3; border: 1px solid #8F9FA3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Gray</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #D8E1E3</div>
+                            <div class="color-value">RGB: 216, 225, 227</div>
+                        </div>
+                        <div class="usage">Dividers, subtle borders</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #F7F9FA; border: 1px solid #8F9FA3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Background Tint</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #F7F9FA</div>
+                            <div class="color-value">RGB: 247, 249, 250</div>
+                        </div>
+                        <div class="usage">Page backgrounds</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #FFFFFF; border: 1px solid #8F9FA3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Pure White</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #FFFFFF</div>
+                            <div class="color-value">RGB: 255, 255, 255</div>
+                        </div>
+                        <div class="usage">Cards, containers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chart Colors Example -->
+        <div class="section">
+            <h2>Data Visualization Example</h2>
+            <p style="color: #5A6C70; margin-bottom: 16px;">Multi-series chart color palette in action:</p>
+            <div class="chart-example">
+                <div class="chart-bar" style="background-color: #0A5C5F;">Series 1</div>
+                <div class="chart-bar" style="background-color: #D97E3F;">Series 2</div>
+                <div class="chart-bar" style="background-color: #527A6E;">Series 3</div>
+                <div class="chart-bar" style="background-color: #B8654D;">Series 4</div>
+                <div class="chart-bar" style="background-color: #3B7A7D;">Series 5</div>
+                <div class="chart-bar" style="background-color: #8B6F47;">Series 6</div>
+            </div>
+        </div>
+        
+        <!-- Alert Colors -->
+        <div class="section">
+            <h2>Alert & Status Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #C44536;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Error / Critical</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #C44536</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #E39D3F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Warning</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #E39D3F</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #4A8F72;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Success</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #4A8F72</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #3B7A7D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Info</div>
+                        <div class="color-values">
+                            <div class="color-value">HEX: #3B7A7D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
