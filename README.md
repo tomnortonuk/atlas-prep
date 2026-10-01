@@ -8,7 +8,7 @@ ATLAS is a national health and care data intelligence platform bringing together
 
 ## 📦 Repository Contents
 
-This repository contains the complete brand identity and design system for ATLAS.
+This repository contains the **complete planning, research, brand identity, and implementation specifications** for building the ATLAS platform.
 
 ### Brand Assets
 
@@ -29,6 +29,20 @@ This repository contains the complete brand identity and design system for ATLAS
 
 - **atlas-color-swatches.html** - Interactive color palette reference
 - **atlas-ui-components-demo.html** - Full UI component showcase
+
+### Platform Preparation (`prompt-prep/`)
+
+Complete technical documentation for building ATLAS:
+
+1. **00-CONVERSATION-OVERVIEW.md** - Project journey and decision history
+2. **01-DATA-SOURCES.md** - Comprehensive catalog of 28+ NHS and care datasets
+3. **02-DATABASE-SCHEMA.md** - Complete SQLite database design with examples
+4. **03-TECHNICAL-ARCHITECTURE.md** - Infrastructure, tech stack, and deployment
+5. **04-PLATFORM-FUNCTIONALITY.md** - Feature specifications and user requirements
+6. **05-ORGANIZATIONAL-HIERARCHY.md** - NHS structure, ODS, succession tracking
+7. **06-IMPLEMENTATION-PROMPT.md** - **Complete build prompt for developers/AI**
+8. **07-NAMING-RESEARCH.md** - Naming journey and competitive analysis
+9. **08-VISUALIZATION-REQUIREMENTS.md** - Chart specifications and SPC standards
 
 ---
 
@@ -55,9 +69,41 @@ Data:      IBM Plex Mono
 
 ## 🚀 Getting Started
 
+### For Building the Platform
+
+1. **Read the conversation overview:**
+   ```bash
+   open prompt-prep/00-CONVERSATION-OVERVIEW.md
+   ```
+
+2. **Review the implementation prompt:**
+   ```bash
+   open prompt-prep/06-IMPLEMENTATION-PROMPT.md
+   ```
+   This is your complete guide to building ATLAS from scratch.
+
+3. **Understand the data sources:**
+   ```bash
+   open prompt-prep/01-DATA-SOURCES.md
+   ```
+   28+ datasets cataloged with details on access, granularity, and update frequency.
+
+4. **Study the database schema:**
+   ```bash
+   open prompt-prep/02-DATABASE-SCHEMA.md
+   ```
+   Complete SQLite schema with examples and recursive queries.
+
+5. **Review the technical architecture:**
+   ```bash
+   open prompt-prep/03-TECHNICAL-ARCHITECTURE.md
+   ```
+   Cloudflare deployment, tech stack, and performance optimization.
+
+### For Brand Implementation
+
 1. **View the brand visually:**
    ```bash
-   # Open in your browser
    open ATLAS-Brand-Summary.html
    open atlas-ui-components-demo.html
    ```
